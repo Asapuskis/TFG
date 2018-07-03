@@ -1,0 +1,21 @@
+Coche 1 curva:
+
+string [] detectableObjects = new string[] { "Paredes", "Meta" };
+
+float[] rayosLaterales = { 90f, 270f };
+float rayDistanceLaterales = 0.7f;
+AddVectorObs(rayPer.Perceive(rayDistanceLaterales, rayosLaterales, detectableObjects, 0f, 0f));
+
+float[] rayoFrontal = { 0f };
+float distanciaFrontal = 1.7f;
+AddVectorObs(rayPer.Perceive(distanciaFrontal, rayoFrontal, detectableObjects, 0f, 0f));
+
+float[] rayosDiagonales = { 45f, 315f };
+float distanciaDiagonal = 1f;
+AddVectorObs(rayPer.Perceive(distanciaDiagonal, rayosDiagonales, detectableObjects, 0f, 0f));
+
+//Posicion 'x' y 'z' del gameObject, en este caso el coche.
+//AddVectorObs(this.transform.position);
+
+//La rotación del coche, en este caso, el eje 'y' será sobre el que rotará el coche al girar en las curvas.
+AddVectorObs(this.transform.rotation);
